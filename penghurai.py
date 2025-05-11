@@ -1,41 +1,6 @@
 # Penghurai = Parser
 from senarai_kata import senarai_kata
 
-suku_kata_melayu = [
-    'a', 'ba', 'ca', 'da', 'ea', 'fa',
-    'ga', 'ha', 'ia', 'ja', 'ka', 'la',
-    'ma', 'na', 'oa', 'pa', 'qa', 'ra',
-    'sa', 'ta', 'ua', 'va', 'wa', 'xa',
-    'ya', 'za',
-    # E / e = e pepet
-    'ae', 'be', 'ce', 'de', 'ee', 'fe',
-    'ge', 'he', 'ie', 'je', 'ke', 'le',
-    'me', 'ne', 'oe', 'pe', 'qe', 're',
-    'se', 'te', 'ue', 've', 'we', 'xe',
-    'ye', 'ze',
-    # É / é = e taling
-    'aé', 'bé', 'cé', 'dé', 'eé', 'fé',
-    'gé', 'hé', 'ié', 'jé', 'ké', 'lé',
-    'mé', 'né', 'oé', 'pé', 'qé', 'ré',
-    'sé', 'té', 'ué', 'vé', 'wé', 'xé',
-    'yé', 'zé',
-    'ai', 'bi', 'ci', 'di', 'ei', 'fi',
-    'gi', 'hi', 'ii', 'ji', 'ki', 'li',
-    'mi', 'ni', 'oi', 'pi', 'qi', 'ri',
-    'si', 'ti', 'ui', 'vi', 'wi', 'xi',
-    'yi', 'zi',
-    'ao', 'bo', 'co', 'do', 'eo', 'fo',
-    'go', 'ho', 'io', 'jo', 'ko', 'lo',
-    'mo', 'no', 'oo', 'po', 'qo', 'ro',
-    'so', 'to', 'uo', 'vo', 'wo', 'xo',
-    'yo', 'zo',
-    'au', 'bu', 'cu', 'du', 'eu', 'fu',
-    'gu', 'hu', 'iu', 'ju', 'ku', 'lu',
-    'mu', 'nu', 'ou', 'pu', 'qu', 'ru',
-    'su', 'tu', 'uu', 'vu', 'wu', 'xu',
-    'yu', 'zu',
-]
-
 onsets = [
     # Single-letter onsets
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
@@ -127,7 +92,18 @@ def pembahagian_suku_kata(kata):
 
     for i, huruf in enumerate(kata):
         jep = len(pembahagian) # jep == Jumlah elemen dalam `pembahagian`
-        if huruf == 'a':
+        elemen_sebelum = pembahagian[jep - 1] if jep > 0 else ""
+        panjang_elemen_sebelum = len(elemen_sebelum)
+        
+        # Untuk 
+        # To capture the first letter
+        if jep <= 0:
+            pembahagian.append(huruf)
+        elif huruf == 'a':
+            # TODO: This condition is already guaranteed to be
+            # true by the first `if` statement, we need to find
+            # another condition to check for if the letter 'a'
+            # can be appended to the previous element in `pembahagian`
             if jep > 0:
                 pembahagian[jep - 1] += huruf
             else:
@@ -139,6 +115,10 @@ def pembahagian_suku_kata(kata):
         elif huruf == 'd':
             pembahagian.append(huruf)
         elif huruf == 'e':
+            # TODO: This condition is already guaranteed to be
+            # true by the first `if` statement, we need to find
+            # another condition to check for if the letter 'a'
+            # can be appended to the previous element in `pembahagian`
             if jep > 0:
                 pembahagian[jep - 1] += huruf
             else:
@@ -146,8 +126,6 @@ def pembahagian_suku_kata(kata):
         elif huruf == 'f':
             pembahagian.append(huruf)
         elif huruf == 'g':
-            elemen_sebelum = pembahagian[jep - 1]
-            panjang_elemen_sebelum = len(elemen_sebelum)
             if i >= 0 and kata[i - 1] == 'n':
                 if i >= 0 and kata[i - 2] == 'a':
                     pembahagian[jep - 1] += huruf
@@ -165,6 +143,10 @@ def pembahagian_suku_kata(kata):
             else:
                 pembahagian.append(huruf)
         elif huruf == 'i':
+            # TODO: This condition is already guaranteed to be
+            # true by the first `if` statement, we need to find
+            # another condition to check for if the letter 'a'
+            # can be appended to the previous element in `pembahagian`
             if jep > 0:
                 pembahagian[jep - 1] += huruf
             else:
@@ -189,6 +171,10 @@ def pembahagian_suku_kata(kata):
             else:
                 pembahagian.append(huruf)
         elif huruf == 'o':
+            # TODO: This condition is already guaranteed to be
+            # true by the first `if` statement, we need to find
+            # another condition to check for if the letter 'a'
+            # can be appended to the previous element in `pembahagian`
             if jep > 0:
                 pembahagian[jep - 1] += huruf
             else:
@@ -211,6 +197,10 @@ def pembahagian_suku_kata(kata):
         elif huruf == 't':
             pembahagian.append(huruf)
         elif huruf == 'u':
+            # TODO: This condition is already guaranteed to be
+            # true by the first `if` statement, we need to find
+            # another condition to check for if the letter 'a'
+            # can be appended to the previous element in `pembahagian`
             if jep > 0:
                 pembahagian[jep - 1] += huruf
             else:
@@ -231,6 +221,19 @@ def pembahagian_suku_kata(kata):
     
     return pembahagian
 
+# Parse and save to file
+def hurai_dan_simpan_ke_fail():
+    lis_psk = []
+    for i, kata in enumerate(senarai_kata):
+        print(f"Elemen nombor {i}: {kata}")
+        psk = pembahagian_suku_kata(kata)
+        # print(psk)
+        # return 0
+        lis_psk.append(psk)
+    
+    with open('psk.py', 'w') as wpsk:
+        wpsk.write(f"psk = {str(lis_psk)}")
+
 def hurai(kata):
     # segmentasi = segmen(kata)
 
@@ -247,6 +250,8 @@ def main():
         
         if kata == 'q' or kata == 'e' or kata == 'quit' or kata == 'exit':
             break
+        elif kata == 'save':
+            hurai_dan_simpan_ke_fail()
         else:
             print(hurai(kata))
 
