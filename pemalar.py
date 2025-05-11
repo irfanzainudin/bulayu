@@ -1,0 +1,36 @@
+import time
+
+suku_kata_melayu = [
+    'a', 'ba', 'ca', 'da', 'ea', 'fa',
+    'ga', 'ha', 'ia', 'ja', 'ka', 'la',
+    'ma', 'na', 'oa', 'pa', 'qa', 'ra',
+    'sa', 'ta', 'ua', 'va', 'wa', 'xa',
+    'ya', 'za',
+    # E / e = e pepet
+    'ae', 'be', 'ce', 'de', 'ee', 'fe',
+    'ge', 'he', 'ie', 'je', 'ke', 'le',
+    'me', 'ne', 'oe', 'pe', 'qe', 're',
+    'se', 'te', 'ue', 've', 'we', 'xe',
+    'ye', 'ze',
+    # É / é = e taling
+    'aé', 'bé', 'cé', 'dé', 'eé', 'fé',
+    'gé', 'hé', 'ié', 'jé', 'ké', 'lé',
+    'mé', 'né', 'oé', 'pé', 'qé', 'ré',
+    'sé', 'té', 'ué', 'vé', 'wé', 'xé',
+    'yé', 'zé',
+    'ai', 'bi', 'ci', 'di', 'ei', 'fi',
+    'gi', 'hi', 'ii', 'ji', 'ki', 'li',
+    'mi', 'ni', 'oi', 'pi', 'qi', 'ri',
+    'si', 'ti', 'ui', 'vi', 'wi', 'xi',
+    'yi', 'zi',
+    'ao', 'bo', 'co', 'do', 'eo', 'fo',
+    'go', 'ho', 'io', 'jo', 'ko', 'lo',
+    'mo', 'no', 'oo', 'po', 'qo', 'ro',
+    'so', 'to', 'uo', 'vo', 'wo', 'xo',
+    'yo', 'zo',
+    'au', 'bu', 'cu', 'du', 'eu', 'fu',
+    'gu', 'hu', 'iu', 'ju', 'ku', 'lu',
+    'mu', 'nu', 'ou', 'pu', 'qu', 'ru',
+    'su', 'tu', 'uu', 'vu', 'wu', 'xu',
+    'yu', 'zu',
+]
