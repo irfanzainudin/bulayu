@@ -9185,19 +9185,20 @@ pembahagian_suku_kata_untuk_senarai_kata = [
     ['a', 'tri', 'um'],
     ['a', 'tuk'],
     ['a', 'tur'],
+    # TODO
     ['au'], # TODO
     ['au', 'di', 'o'],
     ['au', 'dit'],
     ['au', 'di', 'to', 'ri', 'um'],
-    ['au', 'lia'], # HERE
-    ['au', 'n', 's'],
-    ['au', 'r'],
+    ['au', 'li', 'a'],
+    ['a', 'uns'], # TODO
+    ['a', 'ur'],
     ['au', 'ra'],
     ['au', 'ro', 'ra'],
-    ['au', 'ru', 'm'],
-    ['au', 's', 't', 'ra', 'lia'],
+    ['au', 'rum'],
+    ['aus', 'tra', 'li', 'a'],
     ['au', 's', 't', 'ria'],
-    ['au', 'ti', 's', 'me'],
+    ['au', 'tis', 'me'],
     ['au', 'to'],
     ['au', 'to', 'bio', 'g', 'ra', 'fi'],
     ['au', 'to', 'ma', 'ti', 'k'],
@@ -9206,7 +9207,8 @@ pembahagian_suku_kata_untuk_senarai_kata = [
     ['au', 'to', 'no', 'mi'],
     ['au', 'to', 'p', 'si'],
     ['au', 'to', 'ri', 'tarian'],
-    ['a', 'wa'],
+    # END TODO
+    ['a', 'wa'], # HERE
     ['a', 'wa', 'k'],
     ['a', 'wa', 'l'],
     ['a', 'wam'],
