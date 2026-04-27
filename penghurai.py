@@ -5,6 +5,7 @@ from itertools import combinations, permutations
 from senarai_kata import senarai_kata
 from pemalar import VOKAL as VOWELS, KONSONAN as CONSONANTS, SYLLABLE_RULES
 from parser import parse
+from util import print_help
 
 # Load Tatabunyi from TOML file
 with open('Tatabunyi.toml', 'rb') as ttt:
@@ -425,6 +426,8 @@ def main():
             # e.g.
             # - penerangan
             print(hurai(kata))
+        elif "h" in kata:
+            print_help()
         else:
             # TODO: still a bit dodgy
             # e.g.
