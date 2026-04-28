@@ -426,7 +426,7 @@ def main():
             # e.g.
             # - penerangan
             print(hurai(kata))
-        elif "h" in kata:
+        elif (len(kata) == 1 and "h" in kata) or (kata == "help"):
             print_help()
         else:
             # TODO: still a bit dodgy
