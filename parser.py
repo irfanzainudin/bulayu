@@ -174,12 +174,17 @@ def parse(word:str) -> SyllableUnit:
 # Parsing words in senarai_kata
 # parsed_sk = []
 # for j, k in enumerate(senarai_kata):
+#     # TODO: Need to fix this bug
 #     if k in skip_words or 'z' in k:
 #         parsed_sk.append(k)
 #         continue
 #     # print(f"{j}. Current word: {k}")
 #     parsed_k = parse(k)
-#     parsed_k = "".join([p.to_string() + '/' for p in parsed_k])
-#     parsed_sk.append(parsed_k)
+#     psk = []
+#     for p in parsed_k:
+#         psk.append(p.to_string())
+#     # parsed_k = "".join([p.to_string() + '/' for p in parsed_k])
+#     # parsed_sk.append(parsed_k)
+#     parsed_sk.append(psk)
 # with open("parsed_senarai_kata.py", "w") as psk:
 #     psk.write(str(parsed_sk))
